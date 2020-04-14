@@ -1,0 +1,26 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Unknown </title></head><body>
+<h1 id="deep-unet-for-satellite-image-segmentation">Deep UNet for satellite image segmentation</h1>
+<p><img alt="banner" src="https://i.imgur.com/hjITfpc.png" />!</p>
+<h2 id="about-this-project">About this project</h2>
+<p>This is a Keras based implementation of a deep UNet that performs satellite image segmentation.</p>
+<h2 id="dataset">Dataset</h2>
+<ul>
+<li>The dataset consists of 8-band commercial grade satellite imagery taken from SpaceNet dataset.</li>
+<li>Train collection contains few tiff files for each of the 24 locations.</li>
+<li>Every location has an 8-channel image containing spectral information of several wavelength channels (red, red edge, coastal, blue, green, yellow, near-IR1 and near-IR2). These files are located in data/mband/ directory.</li>
+<li>Also available are correctly segmented images of each training location, called mask. These files contain information about 5 different classes: buildings, roads, trees, crops and water (note that original Kaggle contest had 10 classes).</li>
+<li>Resolution for satellite images s 16-bit. However, mask-files are 8-bit.</li>
+</ul>
+<h2 id="implementation">Implementation</h2>
+<ul>
+<li>Deep Unet architecture is employed to perform segmentation.</li>
+<li>Image augmentation is used for input images to significantly increases train data.</li>
+<li>Image augmentation is also done while testing, mean results are exported to result.tif image.
+<img alt="examples" src="https://i.imgur.com/34lq5bD.jpg" /></li>
+</ul>
+<p><strong>Note:</strong> Training for this model was done on a Tesla P100-PCIE-16GB GPU.</p>
+<h2 id="prediction-example">Prediction Example</h2>
+<p><img alt="prediction example" src="https://i.imgur.com/CalIxTU.png" /></p>
+<h2 id="network-architecture">Network architecture</h2>
+<p><img alt="Deep Unet Architecture" src="https://i.imgur.com/zX1r5Rx.png" /></p>
+</body></html>

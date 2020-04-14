@@ -1,1 +1,1 @@
-# satellite_image_segmentation
+# satellite-image-segmentation

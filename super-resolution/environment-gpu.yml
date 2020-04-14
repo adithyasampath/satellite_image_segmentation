@@ -1,0 +1,9 @@
+name: sisr
+dependencies:
+- python=3.6
+- pytest
+- keras
+- tqdm
+- Pillow
+- pip:
+  - tensorflow-gpu

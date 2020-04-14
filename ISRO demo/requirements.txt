@@ -1,0 +1,9 @@
+keras
+tensorflow-gpu==1.12.0
+numpy
+scipy
+joblib
+scikit-image==0.14.2
+scikit-learn
+flask
+flask-cors
